@@ -1,0 +1,24 @@
+.brand-img-container {
+  height: 15rem;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.brand-logo-container {
+  justify-content: center;
+}
+
+.best-seller-head {
+  font-size: 2rem;
+}
+
+.display-spec-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.display-spec-img:hover {
+  opacity: 0.9;
+}
