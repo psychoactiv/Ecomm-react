@@ -1,13 +1,16 @@
 import { React, Fragment } from "react";
 import "./banner.css";
-import bannerImg from "../../Assets/Images/tp29-ning-18-autumn.jpg";
 
 export function Banner() {
   return (
     <Fragment>
       <div>
         <div className="top-image-container">
-          <img src={bannerImg} alt="Phone-img" className="top-img" />
+          <img
+            src="./Assets/Images/tp29-ning-18-autumn.jpg"
+            alt="Phone-img"
+            className="top-img"
+          />
           <div className="top-img-overlay rubik-font">
             Branded SMART PHONES on 40% Discount
           </div>

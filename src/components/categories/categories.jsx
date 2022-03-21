@@ -1,8 +1,5 @@
 import { React, Fragment } from "react";
 import "./categories.css";
-import processorImg from "../../Assets/Images/1-198.jpg";
-import GPUImg from "../../Assets/Images/download_1_6_4.jpg";
-import CameraImg from "../../Assets/Images/oppo-reno.webp";
 
 export function Categories() {
   return (
@@ -18,15 +15,23 @@ export function Categories() {
         <div className="img-display-container">
           <img
             className="display-spec-img"
-            src={processorImg}
+            src="./Assets/Images/1-198.jpg"
             alt="Processor"
           />
         </div>
         <div className="img-display-container">
-          <img className="display-spec-img" src={GPUImg} alt="GPU" />
+          <img
+            className="display-spec-img"
+            src="./Assets/Images/download_1_6_4.jpg"
+            alt="GPU"
+          />
         </div>
         <div className="img-display-container">
-          <img className="display-spec-img" src={CameraImg} alt="Camera" />
+          <img
+            className="display-spec-img"
+            src="./Assets/Images/oppo-reno.webp"
+            alt="Camera"
+          />
         </div>
       </div>
     </Fragment>

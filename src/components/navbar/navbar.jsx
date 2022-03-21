@@ -1,8 +1,8 @@
 import "../navbar/navbar.css";
 import "../../index";
 import { Link } from "react-router-dom";
-import topImage from "../../Assets/Images/Subheading(4).png";
 import { useSideBarBtn } from "../../contexts/sidebar-btn-context/sidebar-btn-context";
+
 export function Navbar() {
   const { toggleSidebar, sideBar } = useSideBarBtn();
   return (
@@ -18,7 +18,11 @@ export function Navbar() {
         <div className="flex jc-sb head-name-links-flex">
           <div className="header-name rubik-font">
             <div className="head-phone-logo">
-              <img className="display-spec-img" src={topImage} alt="phone" />
+              <img
+                className="display-spec-img"
+                src="./Assets/Images/Subheading(4).png"
+                alt="phone"
+              />
             </div>
             PhoneStop
           </div>

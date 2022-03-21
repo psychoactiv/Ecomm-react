@@ -1,7 +1,4 @@
 import { React, Fragment } from "react";
-import appleImg from "../../Assets/Images/58687-logo-computer-apple-icons-free-hd-image.png";
-import oneplusImg from "../../Assets/Images/OnePlus-Rebrand-Red.png";
-import samsungImg from "../../Assets/Images/Samsung-Logo.png";
 
 export function BrandShop() {
   return (
@@ -11,13 +8,25 @@ export function BrandShop() {
       </div>
       <div className="flex flex-wrap mgn-tp-4 jc-sb brand-logo-container">
         <div className="brand-img-container">
-          <img src={appleImg} alt="apple-logo" className="display-spec-img" />
+          <img
+            src="./Assets/Images/58687-logo-computer-apple-icons-free-hd-image.png"
+            alt="apple-logo"
+            className="display-spec-img"
+          />
         </div>
         <div className="brand-img-container">
-          <img src={oneplusImg} alt="Oneplus" className="display-spec-img" />
+          <img
+            src="./Assets/Images/OnePlus-Rebrand-Red.png"
+            alt="Oneplus"
+            className="display-spec-img"
+          />
         </div>
         <div className="brand-img-container mgn-lt-2-5">
-          <img src={samsungImg} alt="Samsung" className="display-spec-img" />
+          <img
+            src="./Assets/Images/Samsung-Logo.png"
+            alt="Samsung"
+            className="display-spec-img"
+          />
         </div>
       </div>
     </Fragment>

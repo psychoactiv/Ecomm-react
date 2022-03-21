@@ -1,19 +1,12 @@
 import "./App.css";
-import { Home } from "./pages/Home/Home";
-import { Cart } from "./pages/Cart/cart";
-import { ProductListing } from "./pages/ProductListing/ProductListing";
-import { Wishlist } from "./pages/Wishlist/wishlist";
-import { Login } from "./pages/Auth/login/login";
-import { Signup } from "./pages/Auth/signup/signup";
-import { Route, Routes, Link } from "react-router-dom";
-import MockMan from "mockman-js";
-import { Navbar } from "./components/navbar/navbar";
-import { StoreFooter } from "./components/Footer/footer";
-import { Sidebar } from "./components/sidebar/sidebar";
+import { Route, Routes } from "react-router-dom";
+import { Home, Cart, ProductListing, Wishlist, Login, Signup } from "./pages";
+import { Navbar, StoreFooter, Sidebar } from "./components";
 import { useSideBarBtn } from "./contexts/sidebar-btn-context/sidebar-btn-context";
+import MockMan from "mockman-js";
 
 function App() {
-  const { sideBar, toggleSidebar } = useSideBarBtn();
+  const { sideBar } = useSideBarBtn();
   return (
     <div className="App">
       <Navbar />
