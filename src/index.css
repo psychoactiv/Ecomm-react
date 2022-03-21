@@ -1,13 +1,254 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Oswald:wght@500;700&family=Roboto:wght@300&family=Rubik:wght@300&display=swap");
+
+html {
+  font-size: 62.5%;
+  width: fit-content;
 }
 
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  --dark-cyan: darkcyan;
+  --grey: grey;
+  --teal: teal;
+  --aqua: aqua;
+}
+
+.rubik-font {
+  font-family: "Rubik", sans-serif;
+}
+
+.head-font {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.testClassChange {
+  display: none;
+}
+
+.openSidebar {
+  margin-left: 36%;
+  transition: 0.6s ease;
+}
+
+.closeSidebar {
+  margin-left: 0%;
+  transition: 0.6s ease;
+}
+
+.open-side-drawer {
+  display: inline-block;
+  width: 36%;
+}
+
+.close-side-drawer {
+  width: 0%;
+}
+.drawer-items.drawer-items.general li a {
+  color: cyan;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.drawer-content .drawer-items.drawer-items.general {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 1.5rem;
+  height: fit-content;
+}
+.drawer-content p {
+  font-size: 1.4rem;
+  transition: 0.6s ease;
+}
+.open-side-drawer-drawer-user-info {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 33%;
+  overflow: hidden;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--cyan-color);
+  height: 6rem;
+  transition: 0.6s ease;
+}
+
+.drawer-top-side h3 {
+  font-size: 2rem;
+  transition: 0.6s;
+}
+
+.open-side-drawer-drawer-user-info p {
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.open-side-drawer-drawer-user-info i {
+  font-size: 2.5rem;
+  transition: 0.3s;
+}
+.open-side-drawer-drawer-user-info i:hover {
+  color: var(--dark-slate-blue);
+}
+.open-side-drawer-drawer-user-info::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+}
+.side-bar-link-change {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--cyan-color);
+}
+
+.close-side-drawer-drawer-user-info {
+  padding-top: 0px;
+  width: 0px;
+  transition: 0.6s ease;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media screen and (min-width: 450px) {
+  html {
+    font-size: 70%;
+    width: 100%;
+  }
+  .header-items-right {
+    flex-shrink: 2;
+  }
+  .top-img-overlay {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+  }
+  .brand-intro-start {
+    color: var(--dark-cyan);
+    font-size: 1.5rem;
+  }
+  .brand-intro-end {
+    color: var(--grey);
+    font-size: 1.5rem;
+  }
+  .brand-name-on-intro {
+    color: var(--dark800);
+    font-size: 2rem;
+  }
+  .category-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 80%;
+  }
+  .header-items-left {
+    width: 35rem;
+    margin: 0.5rem 1.5rem;
+  }
+  .open-side-drawer-drawer-user-info {
+    width: 0%;
+  }
+  .header-items-right {
+    display: block;
+    width: 15rem;
+    margin: 0.5rem 0;
+  }
+  .header-input {
+    flex-shrink: 2;
+  }
+  .openSidebar {
+    margin-left: 0%;
+    transition: 0.6s ease;
+  }
+  .open-side-drawer {
+    width: 0%;
+  }
+  .top-img-overlay {
+    font-size: 2rem;
+    padding-top: 2.5rem;
+  }
+  .brand-intro-start {
+    color: var(--dark-cyan);
+    font-size: 2.5rem;
+  }
+  .brand-intro-end {
+    color: var(--grey);
+    font-size: 2.5rem;
+  }
+  .brand-name-on-intro {
+    color: var(--dark800);
+    font-size: 3.5rem;
+  }
+  .home-side-bar.side-bar-ico {
+    display: none;
+  }
+  .header-links {
+    display: block;
+  }
+  .drawer-items.general li {
+    padding: 4%;
+    font-size: 2rem;
+  }
+  .category-title {
+    font-size: 3rem;
+  }
+  .header-input {
+    border-radius: 10px;
+    width: 15rem;
+    height: 3rem;
+    border: 1px solid var(--grey);
+    text-align: center;
+    padding-right: 4px;
+  }
+  .e-comm-foot {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  html {
+    font-size: 100%;
+  }
+
+  .top-img-overlay {
+    font-size: 3rem;
+  }
+
+  .brand-intro-start {
+    color: var(--dark-cyan);
+    font-size: 3rem;
+  }
+
+  .brand-intro-end {
+    color: var(--grey);
+    font-size: 3rem;
+  }
+
+  .brand-name-on-intro {
+    color: var(--dark800);
+    font-size: 4rem;
+  }
+
+  .category-title {
+    font-size: 4rem;
+  }
+
+  .e-comm-foot {
+    font-size: 1.5rem;
+  }
 }
