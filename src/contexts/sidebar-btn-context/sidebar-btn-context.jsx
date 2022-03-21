@@ -4,11 +4,9 @@ const SideBarBtnContext = createContext(null);
 
 function SidebarBtnProvider({ children }) {
   const [sideBar, setSideBar] = useState(false);
-  console.log(sideBar);
   function toggleSidebar(e) {
     setSideBar((sideBar) => !sideBar);
   }
-  console.log(sideBar);
   return (
     <SideBarBtnContext.Provider value={{ sideBar, toggleSidebar }}>
       {children}
