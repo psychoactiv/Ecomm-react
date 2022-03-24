@@ -1,0 +1,19 @@
+.big-text {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  color: blue;
+}
+
+.change-display {
+  display: block;
+}
+
+.sub-head {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+fieldset {
+  border: none;
+}

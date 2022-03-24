@@ -10,6 +10,11 @@
   position: relative;
 }
 
+.redirect-product-page {
+  background-color: aliceblue;
+  border: none;
+}
+
 .child-wish-list-conatiner {
   position: absolute;
   top: 10px;

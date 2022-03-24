@@ -1,39 +1,44 @@
-import { React, Fragment } from "react";
+import { Loader } from "../../components";
+import { React, Fragment, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useCategories } from "../../contexts/Category-context/category-context.jsx";
 import "./categories.css";
 
 export function Categories() {
+  const { cat, isloaded } = useCategories();
   return (
     <Fragment>
-      <h3 className="text-center category-title head-font mgn-tp-4">
-        Categories
-      </h3>
+      {isloaded ? (
+        <div>
+          <h3 className="text-center category-title head-font mgn-tp-4">
+            Categories
+          </h3>
 
-      <div className="products-spec-display rubik-font">
-        <h4 className="spec-display-head">Top-notch Processor</h4>
-        <h4 className="spec-display-head">High-end GPU for gamers</h4>
-        <h4 className="spec-display-head">Pixel perfect Camera for memories</h4>
-        <div className="img-display-container">
-          <img
-            className="display-spec-img"
-            src="./Assets/Images/1-198.jpg"
-            alt="Processor"
-          />
+          <div className="products-spec-display rubik-font">
+            {cat.data?.categories[0].generalCategories.map((item) => (
+              <Link
+                key={item.id}
+                to={`./products?categories=${item.categoryName}`}
+              >
+                <h4 className="spec-display-head">{item.categoryName}</h4>
+              </Link>
+            ))}
+            {cat.data?.categories[0].generalCategories.map((item) => (
+              <div key={item.id} className="img-display-container">
+                <Link to={`./products?categories=${item.categoryName}`}>
+                  <img
+                    className="display-spec-img"
+                    src={item.image}
+                    alt={item.name}
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="img-display-container">
-          <img
-            className="display-spec-img"
-            src="./Assets/Images/download_1_6_4.jpg"
-            alt="GPU"
-          />
-        </div>
-        <div className="img-display-container">
-          <img
-            className="display-spec-img"
-            src="./Assets/Images/oppo-reno.webp"
-            alt="Camera"
-          />
-        </div>
-      </div>
+      ) : (
+        <Loader />
+      )}
     </Fragment>
   );
 }
