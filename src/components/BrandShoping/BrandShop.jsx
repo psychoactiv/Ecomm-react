@@ -1,4 +1,5 @@
 import { React, Fragment, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useCategories } from "../../contexts/Category-context/category-context";
 
 export function BrandShop() {
@@ -12,11 +13,13 @@ export function BrandShop() {
         {cat.data?.categories[0].brandCategories.map((item) => {
           return (
             <div className="brand-img-container" key={item.id}>
-              <img
-                src={item.brandImage}
-                alt={item.brandName}
-                className="display-spec-img"
-              />
+              <Link to={`./products?brand=${item.brandName}`}>
+                <img
+                  src={item.brandImage}
+                  alt={item.brandName}
+                  className="display-spec-img"
+                />
+              </Link>
             </div>
           );
         })}

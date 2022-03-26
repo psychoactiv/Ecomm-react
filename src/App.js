@@ -9,20 +9,27 @@ function App() {
   const { sideBar } = useSideBarBtn();
   return (
     <div className="App">
-      <Navbar />
-      <Sidebar />
-      <main className={sideBar ? "openSidebar" : "closeSidebar"}>
+      <div class="flex flex-direct-col jc-sb create-space">
+        <div>
+          <Navbar />
+          <Sidebar />
+        </div>
+        <main className={`${sideBar ? "openSidebar" : "closeSidebar"} `}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+
+            <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/mockman" element={<MockMan />} />
+          </Routes>
+        </main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
           <Route path="/products" element={<ProductListing />} />
-          <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/mockman" element={<MockMan />} />
         </Routes>
-      </main>
-      <StoreFooter />
+        <StoreFooter />
+      </div>
     </div>
   );
 }

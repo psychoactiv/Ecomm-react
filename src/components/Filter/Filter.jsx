@@ -20,20 +20,25 @@ export function Filter() {
       dispatch({ type: "GPU" });
     checkIsTrue("Pixel perfect Camera for memories", "categoiries") &&
       dispatch({ type: "CAMERA" });
-    // checkIsTrue() &&
+    checkIsTrue("Apple", "brand") &&
+      dispatch({ type: "BRAND", payload: "APPLE" });
+    checkIsTrue("OnePlus", "brand") &&
+      dispatch({ type: "BRAND", payload: "ONEPLUS" });
+    checkIsTrue("Samsung", "brand") &&
+      dispatch({ type: "BRAND", payload: "SAMSUNG" });
   }, []);
 
   return (
     <Fragment>
       <aside className="fliter-options rubik-font">
-        <form>
+        <form className="filter-form">
           <fieldset>
             <legend className="big-text">Filters</legend>
             <label
               className="change-display sub-head"
               htmlFor="price-range-inp"
             >
-              Filter by ratings
+              Filter by price range
             </label>
             <input
               id="price-range-inp"
@@ -46,7 +51,7 @@ export function Filter() {
               }}
             />
             <label className="rating-value change-display">
-              ₹{state.PRICE}
+              ₹{state.PRICE.toLocaleString("en-US")}
             </label>
           </fieldset>
           <fieldset>
@@ -334,6 +339,17 @@ export function Filter() {
               }}
             />
             ASUS
+          </fieldset>
+          <fieldset className="mgn-tp-0-5">
+            <input
+              type="checkbox"
+              value="8ram"
+              checked={state.ONEPLUS}
+              onChange={() => {
+                dispatch({ type: "BRAND", payload: "ONEPLUS" });
+              }}
+            />
+            OnePlus
           </fieldset>
         </form>
       </aside>

@@ -1,10 +1,12 @@
 import { useFilter } from "../../contexts/Filter-context/Filter-context";
+import { useCartContext } from "../../contexts/Cart-context/cart-context";
 import { React } from "react";
 import { Loader } from "../../components";
 import "./ProductDisplay.css";
 
 export function ProductDisplay() {
   const { finalArr, chooseStars, dispatch, load } = useFilter();
+  const { cartDispatch } = useCartContext();
   return (
     <div className="flex flex-direct-col width-take-all">
       <div className="best-seller-head head-font mgn-lt-4 flex jc-sb">
@@ -47,10 +49,15 @@ export function ProductDisplay() {
                       {item.rating} <i className={`fas fa-star ${font}`}></i>
                     </span>
                     <span className="font-wt-black card-price">
-                      {item.price}
+                      {item.price.toLocaleString("en-US")}
                     </span>
                   </div>
-                  <button className="all-btn-el add-to-cart product-card-buy mgn-tp-1">
+                  <button
+                    className="all-btn-el add-to-cart product-card-buy mgn-tp-1"
+                    onClick={() =>
+                      cartDispatch({ type: "ADD_TO_CART", payload: item })
+                    }
+                  >
                     <i className="fas fa-shopping-cart "></i> ADD TO CART
                   </button>
                   <button className="wishlist-btn">Add To Wishlist</button>

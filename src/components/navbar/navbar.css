@@ -142,6 +142,29 @@ i.home-side-bar.side-bar-ico {
   opacity: 0.9;
 }
 
+.icon-badge-container {
+  position: relative;
+}
+
+.icon-cart-relative-under-single-digit {
+  padding: 0px 7px;
+  font-size: 1.3rem;
+}
+
+.common-icon-cart-realtive {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  background-color: rgb(108, 108, 245);
+  color: white;
+  border-radius: 999rem;
+}
+
+.icon-cart-relative-over-single-digit {
+  padding: 3px 5px;
+  font-size: 1rem;
+}
+
 @media screen and (min-width: 450px) {
   html {
     font-size: 70%;

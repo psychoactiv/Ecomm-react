@@ -13,6 +13,7 @@ const initialFilter = {
   APPLE: false,
   VIVO: false,
   ASUS: false,
+  ONEPLUS: false,
 };
 
 function priceFn(state, data) {
@@ -108,7 +109,13 @@ function ratings(state, data) {
 }
 
 function phoneBRAND(state, data) {
-  if (state.SAMSUNG || state.APPLE || state.VIVO || state.ASUS) {
+  if (
+    state.SAMSUNG ||
+    state.APPLE ||
+    state.VIVO ||
+    state.ASUS ||
+    state.ONEPLUS
+  ) {
     const newArrData = [...data];
     return newArrData.filter((item) => state[item.brand.toUpperCase()]);
   }
