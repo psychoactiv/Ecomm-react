@@ -1,17 +1,16 @@
 import { React, Fragment } from "react";
-import { Banner } from "../../components/banner/banner";
-import { Categories } from "../../components/categories/categories";
-import { BestSelling } from "../../components/Best-selling-product/best-selling";
-import { BrandShop } from "../../components/BrandShoping/BrandShop";
-
+import { Banner, Categories, BestSelling, BrandShop } from "../../components";
+import { CategoryProvider } from "../../contexts/Category-context/category-context";
 
 export function Home() {
   return (
     <Fragment>
-      <Banner />
-      <Categories />
-      <BestSelling />
-      <BrandShop />
+      <CategoryProvider>
+        <Banner />
+        <Categories />
+        <BestSelling />
+        <BrandShop />
+      </CategoryProvider>
     </Fragment>
   );
 }

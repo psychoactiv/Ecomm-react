@@ -1,3 +1,10 @@
 export { Navbar } from "./navbar/navbar";
 export { StoreFooter } from "./Footer/footer";
 export { Sidebar } from "./sidebar/sidebar";
+export { Filter } from "./Filter/Filter";
+export { Banner } from "./banner/banner";
+export { Categories } from "./categories/categories";
+export { BestSelling } from "./Best-selling-product/best-selling";
+export { BrandShop } from "./BrandShoping/BrandShop";
+export { ProductDisplay } from "./ProductDisplay/ProductDisplay";
+export { Loader } from "./loader/loader";

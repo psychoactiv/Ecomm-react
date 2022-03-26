@@ -20,7 +20,7 @@ export function Navbar() {
             <div className="head-phone-logo">
               <img
                 className="display-spec-img"
-                src="./Assets/Images/Subheading(4).png"
+                src="./Assets/Images/Subheading (4).png"
                 alt="phone"
               />
             </div>

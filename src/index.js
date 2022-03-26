@@ -6,6 +6,7 @@ import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
 import "./components/navbar/navbar";
 import { SidebarBtnProvider } from "./contexts/sidebar-btn-context/sidebar-btn-context";
+import { FilterProvider } from "./contexts/Filter-context/Filter-context";
 
 // Call make Server
 makeServer();
@@ -13,9 +14,11 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <SidebarBtnProvider>
-        <App />
-      </SidebarBtnProvider>
+      <FilterProvider>
+        <SidebarBtnProvider>
+          <App />
+        </SidebarBtnProvider>
+      </FilterProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
