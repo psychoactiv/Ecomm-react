@@ -24,43 +24,43 @@ const CartCheckout = () => {
 
   return (
     <Fragment>
-      <div class="rubik-font grey-0-5-bdr600 border-radius5 checkout-cart-card">
-        <div class="grey-bg400 cart-checkout-head">PRICE SUMMARY</div>
-        <ul class="mgn-1">
-          <li class="flex jc-sb mgn-0-5--0">
+      <div className="rubik-font grey-0-5-bdr600 border-radius5 checkout-cart-card">
+        <div className="grey-bg400 cart-checkout-head">PRICE SUMMARY</div>
+        <ul className="mgn-1">
+          <li className="flex jc-sb mgn-0-5--0">
             <p>Total QTY of items</p>
             <p>{cartDetails.CartQty}</p>
           </li>
-          <li class="flex jc-sb mgn-0-5--0">
+          <li className="flex jc-sb mgn-0-5--0">
             <p>Total MRP (Incl. of taxes)</p>
             <p>₹{cartDetails.totalMrp?.toLocaleString("en-US")}</p>
           </li>
-          <li class="flex jc-sb mgn-0-5--0">
+          <li className="flex jc-sb mgn-0-5--0">
             <p>Delivery Fee</p>
             <p>FREE</p>
           </li>
-          <li class="flex jc-sb mgn-0-5--0">
+          <li className="flex jc-sb mgn-0-5--0">
             <p>Total Discount</p>
             <p>-₹{cartDetails.discountedPrice?.toLocaleString("en-US")}</p>
           </li>
-          <li class="flex jc-sb mgn-0-5--0">
+          <li className="flex jc-sb mgn-0-5--0">
             <p>Subtotal</p>
             <p>₹{cartDetails.subTotal?.toLocaleString("en-US")}</p>
           </li>
         </ul>
-        <p class="green-alert-light-bg green-alert-dark-color border-radius10 text-center mgn-1">
+        <p className="green-alert-light-bg green-alert-dark-color border-radius10 text-center mgn-1">
           You are saving ₹{cartDetails.discountedPrice?.toLocaleString("en-US")}{" "}
           on this order
         </p>
 
-        <div class="flex jc-sb pd-0-5 col-gap-1">
+        <div className="flex jc-sb pd-0-5 col-gap-1">
           <div>
-            <small class="font-wt-semibold">Total</small>
-            <div class="font-wt-bold">
+            <small className="font-wt-semibold">Total</small>
+            <div className="font-wt-bold">
               ₹{cartDetails.subTotal?.toLocaleString("en-US")}
             </div>
           </div>
-          <button class="pd-0-5--1 cart-address-btn">ADD ADDRESS</button>
+          <button className="pd-0-5--1 cart-address-btn">ADD ADDRESS</button>
         </div>
       </div>
     </Fragment>

@@ -14,8 +14,8 @@ export function Snackbar({
   }
   return (
     <Fragment>
-      <div class=" hidden-snackbar">
-        <div class={`snack ${toggleSnackbar} snacked`}>
+      <div className=" hidden-snackbar">
+        <div className={`snack ${toggleSnackbar} snacked`}>
           <div>{displayMsg}</div>
           {snackbarWithButton ? (
             <button
@@ -27,8 +27,8 @@ export function Snackbar({
               {snackbarWithButton}
             </button>
           ) : null}
-          <button class="cancel-snackbar" onClick={cancelSnackbar}>
-            <i class="fas fa-times"></i>
+          <button className="cancel-snackbar" onClick={cancelSnackbar}>
+            <i className="fas fa-times"></i>
           </button>
         </div>
       </div>

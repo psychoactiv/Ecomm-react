@@ -59,14 +59,14 @@ export function Navbar() {
 
         <div className="header-icon-links flex flex-direct-col align-i-center">
           <Link to="/cart" className="flex flex-direct-col align-i-center">
-            <div class="icon-badge-container">
+            <div className="icon-badge-container">
               {cartState.length ? (
                 cartState.length > 9 ? (
-                  <div class="icon-cart-relative-over-single-digit common-icon-cart-realtive">
+                  <div className="icon-cart-relative-over-single-digit common-icon-cart-realtive">
                     {cartState.length}
                   </div>
                 ) : (
-                  <div class="icon-cart-relative-under-single-digit common-icon-cart-realtive">
+                  <div className="icon-cart-relative-under-single-digit common-icon-cart-realtive">
                     {cartState.length}
                   </div>
                 )
