@@ -59,6 +59,13 @@
   margin-left: auto;
   border: none;
   font-size: 2rem;
+  padding: 5px;
   background-color: rgb(139, 7, 139);
-  color: rgb(199, 139, 199);
+  color: white;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.yes-btn:focus {
+  background-color: rgb(59, 0, 59);
 }

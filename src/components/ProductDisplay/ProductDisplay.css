@@ -107,16 +107,17 @@
   border-radius: 999rem;
 }
 
-.child-wish-list {
+.child-wish-list-heart {
   color: var(--red-alert);
   font-size: 1rem;
   cursor: pointer;
-  transition: 0.1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-.child-wish-list:active {
+.child-wish-list-heart-clicked {
   color: var(--pure-red);
   transform: scale(1.5);
+  transition: 0.2s ease-in-out;
 }
 
 .same-star.chng-pad {

@@ -1,31 +1,16 @@
 import { React, Fragment, useState } from "react";
 import { useFilter } from "../../contexts/Filter-context/Filter-context";
-import { useSearchParams } from "react-router-dom";
 import "./Filter.css";
 import { useEffect } from "react";
+import { decideCategoriesBrand } from "../../utils/catogries-brand-utils";
+import { useSearchParams } from "react-router-dom";
 
 export function Filter() {
   const { dispatch, state } = useFilter();
   const [cat] = useSearchParams();
 
-  function checkIsTrue(para, val) {
-    return cat.get(val) === para;
-  }
-
   useEffect(() => {
-    dispatch({ type: "RESET" });
-    checkIsTrue("Top-notch Processor", "categories") &&
-      dispatch({ type: "TOPPROCESSOR" });
-    checkIsTrue("High-end GPU for gamers", "categories") &&
-      dispatch({ type: "GPU" });
-    checkIsTrue("Pixel perfect Camera for memories", "categoiries") &&
-      dispatch({ type: "CAMERA" });
-    checkIsTrue("Apple", "brand") &&
-      dispatch({ type: "BRAND", payload: "APPLE" });
-    checkIsTrue("OnePlus", "brand") &&
-      dispatch({ type: "BRAND", payload: "ONEPLUS" });
-    checkIsTrue("Samsung", "brand") &&
-      dispatch({ type: "BRAND", payload: "SAMSUNG" });
+    decideCategoriesBrand(dispatch, cat);
   }, []);
 
   return (

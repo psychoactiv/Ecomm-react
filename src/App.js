@@ -9,7 +9,7 @@ function App() {
   const { sideBar } = useSideBarBtn();
   return (
     <div className="App">
-      <div class="flex flex-direct-col jc-sb create-space">
+      <div className="flex flex-direct-col jc-sb create-space">
         <div>
           <Navbar />
           <Sidebar />

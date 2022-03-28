@@ -8,6 +8,7 @@ import "./components/navbar/navbar";
 import { SidebarBtnProvider } from "./contexts/sidebar-btn-context/sidebar-btn-context";
 import { FilterProvider } from "./contexts/Filter-context/Filter-context";
 import { CartContextProvider } from "./contexts/Cart-context/cart-context";
+import { WishlistProvider } from "./contexts/wishlist-context/wishlist-context";
 
 // Call make Server
 makeServer();
@@ -16,11 +17,13 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <CartContextProvider>
-        <FilterProvider>
-          <SidebarBtnProvider>
-            <App />
-          </SidebarBtnProvider>
-        </FilterProvider>
+        <WishlistProvider>
+          <FilterProvider>
+            <SidebarBtnProvider>
+              <App />
+            </SidebarBtnProvider>
+          </FilterProvider>
+        </WishlistProvider>
       </CartContextProvider>
     </BrowserRouter>
   </React.StrictMode>,

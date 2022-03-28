@@ -10,4 +10,5 @@ export { ProductDisplay } from "./ProductDisplay/ProductDisplay";
 export { Loader } from "./loader/loader";
 export { CartCard } from "./cartCard/cart-card";
 export { CartCheckout } from "./cart-checkout-card/cart-checkout-card";
-export { Snackbar } from "./snackbar/snackbar";
+export { WishListCard } from "./Wishlist/wishlist-card";
+export { useSnackbar } from "./snackbar/snackbar";
