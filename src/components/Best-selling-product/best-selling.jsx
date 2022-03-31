@@ -35,7 +35,9 @@ export function BestSelling() {
                   <span className={`${bg} same-star chng-pad`}>
                     {item.rating} <i className={`fas fa-star ${font}`}></i>
                   </span>
-                  <span className="font-wt-black card-price">{item.price}</span>
+                  <span className="font-wt-black card-price">
+                    {item.price.toLocaleString("en-US")}
+                  </span>
                 </div>
                 <button className="all-btn-el add-to-cart product-card-buy mgn-tp-1">
                   <i className="fas fa-shopping-cart"></i> ADD TO CART

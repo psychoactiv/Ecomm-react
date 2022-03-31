@@ -17,3 +17,15 @@
 fieldset {
   border: none;
 }
+
+.fliter-options {
+  position: sticky;
+  overflow-y: scroll;
+  top: 1rem;
+  align-self: flex-start;
+}
+
+.filter-form {
+  height: 100vh;
+  padding-right: 3rem;
+}

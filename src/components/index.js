@@ -8,3 +8,6 @@ export { BestSelling } from "./Best-selling-product/best-selling";
 export { BrandShop } from "./BrandShoping/BrandShop";
 export { ProductDisplay } from "./ProductDisplay/ProductDisplay";
 export { Loader } from "./loader/loader";
+export { CartCard } from "./cartCard/cart-card";
+export { CartCheckout } from "./cart-checkout-card/cart-checkout-card";
+export { Snackbar } from "./snackbar/snackbar";
