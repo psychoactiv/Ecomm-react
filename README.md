@@ -1,4 +1,9 @@
-## E-Commerce Backend
 
-This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
+<p align="center">
+  
+ <h1 align="center">
+    PhoneStop 
+</h1>
+</p>
+PhoneStop is an Ecommerce webapp createad using REACT
 # Ecomm-react
