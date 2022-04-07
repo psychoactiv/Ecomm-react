@@ -12,11 +12,12 @@ Decription
 PhoneStop is an Ecommerce webapp createad using REACT.JS and MockBackend
 
 <h1>Features as of now</h1>
-[Home page](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/)
-[Products page](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/products)
-[Wishlist page](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/wishlist)
-[Cart page](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/cart)
-[Authentication (static as of now)](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/login)
+* [Home](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/)
+* [Products](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/products)
+* [Wishlist](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/wishlist)
+* [Cart](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/cart)
+* [Authentication_(static_as_of_now)](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/login)
+
 
 <h1>Responsive</h1>
 The app is responsive for most of the devices.
