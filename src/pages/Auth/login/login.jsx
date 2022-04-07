@@ -1,10 +1,11 @@
 import { React, Fragment } from "react";
-export function Login() {
+import { Sign } from "../../../components/auth/signinPass/signinPass";
+function Login() {
   return (
     <Fragment>
-      <div>
-        <div>Login Page</div>
-      </div>
+      <Sign />
     </Fragment>
   );
 }
+
+export { Login };
