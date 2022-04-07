@@ -124,11 +124,21 @@ body {
   color: var(--cyan-color);
 }
 
+.all-btn-el.danger-btn.chng-btn-width {
+  display: block;
+  width: 95%;
+  margin: 0.5rem auto;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+}
+
 .close-side-drawer-drawer-user-info {
   padding-top: 0px;
   width: 0px;
   transition: 0.6s ease;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

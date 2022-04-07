@@ -17,6 +17,7 @@ const useFilter = () => useContext(FilterContext);
 function FilterProvider({ children }) {
   const [data, setData] = useState([]);
   const [load, setLoader] = useState(true);
+
   useEffect(() => {
     (async () => {
       try {
@@ -41,7 +42,16 @@ function FilterProvider({ children }) {
   }
   const finalArr = compose(state, functionArr)(data.data?.products || data);
   return (
-    <FilterContext.Provider value={{ chooseStars, dispatch, finalArr, state, load, data }}>
+    <FilterContext.Provider
+      value={{
+        chooseStars,
+        dispatch,
+        finalArr,
+        state,
+        load,
+        data,
+      }}
+    >
       {children}
     </FilterContext.Provider>
   );

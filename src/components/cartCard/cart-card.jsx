@@ -1,11 +1,13 @@
-import { React } from "react";
+import { React, Fragment } from "react";
 import { useCartContext } from "../../contexts/Cart-context/cart-context";
 import "./cart-card.css";
 import { calculateCartItems } from "../../utils/cart-details";
-export const CartCard = ({ disSnack }) => {
+import { useWishlist } from "../../contexts/wishlist-context/wishlist-context";
+export const CartCard = ({ decideSnackbarFate }) => {
   const { cartState, cartDispatch } = useCartContext();
+  const { dispatchWish } = useWishlist();
   return (
-    <>
+    <Fragment>
       {cartState.map((item) => {
         const [discountedPrice, savedAmount] = calculateCartItems(
           item.price,
@@ -48,7 +50,10 @@ export const CartCard = ({ disSnack }) => {
                       ) : (
                         <button
                           className="increase-cart-item-qty display-btn snck change-btn qty-btn"
-                          onClick={() => disSnack("INCREASE")}
+                          onClick={() => {
+                            decideSnackbarFate("INCREASE");
+                            console.log(decideSnackbarFate);
+                          }}
                         >
                           +
                         </button>
@@ -56,19 +61,22 @@ export const CartCard = ({ disSnack }) => {
                       {item.qty > 1 ? (
                         <button
                           className="decrease-cart-item-qty qty-btn"
-                          onClick={() =>
+                          onClick={() => {
                             cartDispatch({
                               type: "DECREMENT_CART_ITEMS",
                               payload: item.id,
-                            })
-                          }
+                            });
+                            console.log(decideSnackbarFate);
+                          }}
                         >
                           -
                         </button>
                       ) : (
                         <button
                           className="decrease-cart-item-qty qty-btn"
-                          onClick={() => disSnack("DECREASE", item.id)}
+                          onClick={() =>
+                            decideSnackbarFate("DECREASE", item.id)
+                          }
                         >
                           -
                         </button>
@@ -83,14 +91,27 @@ export const CartCard = ({ disSnack }) => {
             </div>
 
             <div className="flex">
-              <button className="remove-from-cart-btn cart-card-btn">Remove</button>
-              <button className="move-to-wishlist-btn cart-card-btn">
+              <button
+                className="remove-from-cart-btn cart-card-btn"
+                onClick={() =>
+                  cartDispatch({ type: "REMOVE_ITEM", payload: item.id })
+                }
+              >
+                Remove
+              </button>
+              <button
+                className="move-to-wishlist-btn cart-card-btn"
+                onClick={() => {
+                  dispatchWish({ type: "ADD_TO_WISHLIST", payload: item });
+                  cartDispatch({ type: "REMOVE_ITEM", payload: item.id });
+                }}
+              >
                 Move to Wishlist
               </button>
             </div>
           </div>
         );
       })}
-    </>
+    </Fragment>
   );
 };
