@@ -3,10 +3,14 @@ import "../../index";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../contexts/Cart-context/cart-context";
 import { useSideBarBtn } from "../../contexts/sidebar-btn-context/sidebar-btn-context";
+import { useWishlist } from "../../contexts/wishlist-context/wishlist-context";
 
 export function Navbar() {
   const { toggleSidebar, sideBar } = useSideBarBtn();
   const { cartState } = useCartContext();
+  const {
+    initialWish: { wishes },
+  } = useWishlist();
   return (
     <header
       className="flex nav-bar"
@@ -50,7 +54,20 @@ export function Navbar() {
       <div className="header-items-right flex mgn-lt-auto jc-sa">
         <div className="header-icon-links flex flex-direct-col align-i-center">
           <Link to="/wishlist" className="flex flex-direct-col align-i-center">
-            <i className="fas fa-heart header-icons"></i>
+            <div className="icon-badge-container">
+              {wishes.length ? (
+                wishes.length > 9 ? (
+                  <div className="icon-cart-relative-over-single-digit common-icon-cart-realtive">
+                    {wishes.length}
+                  </div>
+                ) : (
+                  <div className="icon-cart-relative-under-single-digit common-icon-cart-realtive">
+                    {wishes.length}
+                  </div>
+                )
+              ) : null}
+              <i className="fas fa-heart header-icons"></i>
+            </div>
             <div className="header-ic-link-description rubik-font">
               Wishlist
             </div>
