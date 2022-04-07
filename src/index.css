@@ -102,6 +102,15 @@ body {
   transition: 0.6s;
 }
 
+.input-last-side-icon {
+  position: absolute;
+  bottom: calc(50% - 1.5rem);
+  right: 10px;
+  font-size: 1.5rem;
+  color: var(--light-blue800);
+  cursor: pointer;
+}
+
 .open-side-drawer-drawer-user-info p {
   font-size: 1rem;
   overflow: hidden;

@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Home, Cart, ProductListing, Wishlist, Login, Signup } from "./pages";
 import { Navbar, StoreFooter, Sidebar } from "./components";
+import { ForgotPassword } from "./pages/Auth/forgot/forgot";
 import { useSideBarBtn } from "./contexts/sidebar-btn-context/sidebar-btn-context";
 import MockMan from "mockman-js";
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/wishlist" element={<Wishlist />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/forgot" element={<ForgotPassword />} />
             <Route path="/mockman" element={<MockMan />} />
           </Routes>
         </main>

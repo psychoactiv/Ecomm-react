@@ -1,0 +1,98 @@
+input[type="checkbox"] {
+  cursor: pointer;
+}
+.responsive-account-img-container {
+  width: fit-content;
+  height: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.responsive-account-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.account-img-head {
+  font-size: 2rem;
+}
+.account-container-centering {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.input-placeholder {
+  cursor: text;
+  font-size: 1.3rem;
+}
+
+label.input-validation-conatiner {
+  margin-top: 0.5rem;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+label.input-validation-conatiner input {
+  border: 3px solid var(--white);
+  border-bottom: 3px solid var(--blue400);
+}
+
+label.input-validation-conatiner input:focus {
+  border: 3px solid var(--blue500);
+}
+
+.contain-all-account-page {
+  width: 70%;
+  margin: 2rem auto;
+  background-color: var(--white);
+  border-radius: 10px;
+  background-color: var(--blue200);
+  font-size: 1rem;
+}
+
+.account-user-input-container {
+  width: 100%;
+}
+
+.img-account-whole-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.account-submit-btn {
+  border: none;
+  background-color: var(--blue500);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.account-submit-btn:hover {
+  background-color: var(--blue600);
+}
+
+.account-link-style {
+  text-decoration: none;
+  color: var(--light-blue700);
+}
+
+@media screen and (min-width: 600px) {
+  .account-user-input-container {
+    width: 50%;
+  }
+
+  .responsive-account-img-container {
+    width: fit-content;
+    height: 70%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .input-placeholder {
+    cursor: text;
+    font-size: 1.5rem;
+  }
+}
