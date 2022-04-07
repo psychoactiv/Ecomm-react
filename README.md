@@ -5,5 +5,21 @@
     PhoneStop 
 </h1>
 </p>
-PhoneStop is an Ecommerce webapp createad using REACT
-# Ecomm-react
+
+<h1>
+Decription
+</h1> 
+PhoneStop is an Ecommerce webapp createad using REACT.JS and MockBackend
+
+<h1>Features as of now</h1>
+[Home page](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/)
+[Products page](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/products)
+[Wishlist page](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/wishlist)
+[Cart page](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/cart)
+[Authentication (static as of now)](https://deploy-preview-4--iridescent-semifreddo-61c61d.netlify.app/login)
+
+<h1>Responsive</h1>
+The app is responsive for most of the devices.
+
+https://user-images.githubusercontent.com/68146697/162259736-eeb4d110-498e-4487-b0ae-e391e57b1814.mp4
+
